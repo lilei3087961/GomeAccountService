@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/drawable_more_login_mode_layout"
+    tools:context=".PersonalInfoActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+
+        android:visibility="visible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_item_vertical_margin"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+
+                android:text="@string/txt_modify_nickname"
+                android:textColor="@color/color_text_90"
+
+                android:textSize="@dimen/dialog_text_title_size"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_item_vertical_margin"
+            android:background="@drawable/gome_edit_background_da"
+            android:paddingRight="@dimen/edit_item_padding_right"
+            >
+
+            <EditText
+                android:id="@+id/edit_nick_name"
+                android:layout_width="0dip"
+
+                android:layout_height="@dimen/button_default_height"
+                android:layout_weight="1"
+                android:background="@color/color_edittext_backgound"
+                android:gravity="center_vertical|left"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/edit_text_hint_padding_left"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+
+                android:textColor="@color/color_text_edit"
+                android:textColorHint="@color/color_text_edit_hint"
+                android:textSize="@dimen/text_edit_hint_size"/>
+
+            <ImageView
+                android:id="@+id/image_delete_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:contentDescription="@drawable/clear"
+                android:onClick="doOnclickClearEditNickNameButton"
+                android:src="@drawable/gome_sys_icon_delete"
+                android:textColor="@color/color_text_forget_pwd"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_padding_bottom"
+            android:orientation="horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
+
+            <Button
+                style="@com.gome:style/Widget.GOME.Light.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginRight="@dimen/dialog_button_margin_right"
+                android:layout_weight="1"
+                android:onClick="doOnclickModifyNickNameCancelButton"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:text="@string/txt_set_network_cancel"
+                android:textSize="@dimen/button_text_size"/>
+
+            <Button
+                android:id="@+id/btn_modify_nick_name"
+                style="@com.gome:style/Widget.GOME.Light.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_weight="1"
+                android:onClick="doOnclickModifyNickNameOkButton"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:text="@string/registerresult_activity_ok"
+                android:textSize="@dimen/button_text_size"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

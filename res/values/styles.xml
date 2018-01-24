@@ -1,0 +1,53 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+	<style name="AlertDialog" parent="@android:Theme.DeviceDefault.Light.Dialog">  
+		<!-- 这里设置背景为透明，为了隐藏边框 -->  
+        <item name="android:windowBackground">@android:color/transparent</item>  
+        <item name="android:windowNoTitle">true</item>  
+		<!-- 这里是修改顶部标题背景颜色，具体颜色自己定，可以是图片 -->  
+        <item name="android:topDark">@color/color_white</item>  
+ 		<!-- 这里是修改内容区域背景颜色 -->  
+    	<item name="android:centerDark">@color/color_white</item>  
+        <item name="android:windowIsTranslucent">true</item>  
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>  
+	</style>
+	<style name="GomeActivityAnimationStyle">
+	    <item name="android:activityOpenEnterAnimation">@anim/gome_activity_open_enter</item>
+	    <item name="android:activityOpenExitAnimation">@anim/gome_activity_open_exit</item>
+	    <item name="android:activityCloseEnterAnimation">@anim/gome_activity_close_enter</item>
+	    <item name="android:activityCloseExitAnimation">@anim/gome_activity_close_exit</item>
+	</style>
+	<style name="MyCustomActionbar" parent="@android:style/Widget.Material.Light.ActionBar">
+        <item name="android:contentInsetStart">0dp</item>
+        <item name="android:contentInsetEnd">0dp</item>
+    </style>
+    <style name="AppButtonStyle">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="AppButtonStyle.Bottom">
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textColor">@color/colorTextSelected</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <!--<item name="android:textAllCaps">false</item>-->
+    </style>
+</resources>

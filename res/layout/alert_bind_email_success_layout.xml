@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/drawable_more_login_mode_layout"
+    tools:context=".AccountInfoActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_more_login_mode_layout"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_item_vertical_margin"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_item_vertical_margin"
+            android:layout_marginTop="@dimen/activity_item_vertical_margin"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/more_lgoin_mode_item_height"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/txt_bind_mail_success"
+                android:textSize="@dimen/text_info_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_default_height"
+                android:background="@drawable/btn_gome_shape_techain"
+                android:onClick="doOnclickCloseDialog"
+                android:textColor="@drawable/btn_gome_button_text_color"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:text="@string/registerresult_activity_ok"
+                android:textSize="@dimen/btn_gome_text_size"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
+            
+     <!--      <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_selector"
+
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:text="@string/txt_set_network_cancel"
+                android:textColor="@color/color_button_link" 
+                android:textSize="@dimen/text_info_size" /> --> 
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

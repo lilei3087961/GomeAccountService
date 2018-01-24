@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_more_login_mode_layout"
+    android:orientation="vertical"
+    tools:context=".AccountInfoActivity" >
+        <RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/color_grey"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		>
+ 	<LinearLayout 
+            android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginBottom="10dp"
+			android:background="@drawable/layout_selector"
+			android:paddingBottom="@dimen/activity_item_bottom_margin"
+			android:paddingTop="@dimen/activity_item_top_margin"
+            >
+            <ImageView
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:id="@+id/aheadPhoto"
+				android:src="@drawable/head"
+				android:contentDescription="@drawable/head"
+				android:layout_marginBottom="@dimen/activity_item_vertical_margin"
+				android:layout_gravity="center"/>
+            <LinearLayout 
+                android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginBottom="@dimen/activity_item_vertical_margin"
+               >
+                <TextView 
+                   android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:gravity="center_horizontal"
+			       android:textSize="@dimen/text_info_size"
+			       android:text="@string/txt_register_success_info_part4"
+                    />
+                <TextView 
+                   android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:gravity="center_horizontal"
+			       android:textSize="@dimen/text_info_size"
+			       android:text="@string/txt_register_success_info_part5"
+                    />
+
+            </LinearLayout>
+           <RelativeLayout 
+                android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginLeft="@dimen/activity_item_left_margin"
+				android:layout_marginRight="@dimen/activity_item_right_margin"
+                >
+                <Button
+                    style="@com.gome:style/Widget.GOME.Light.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_default_height"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="doOnlcikRegisterSuccess2ExperienceNowButton"
+                    android:paddingLeft="@dimen/button_padding_left"
+                    android:paddingRight="@dimen/button_padding_right"
+                    android:text="@string/btn_login_now"
+                    android:textSize="@dimen/btn_gome_text_size" />
+
+            </RelativeLayout>    
+        </LinearLayout>
+   </RelativeLayout>     
+</LinearLayout>

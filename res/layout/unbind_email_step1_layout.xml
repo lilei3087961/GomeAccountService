@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_unbind_email_step1"   
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_activity_backgound"
+    tools:context=".BindOrUnbindActivity" >
+<!-- 标题布局 -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height" 
+	    android:layout_marginBottom="@dimen/page_top_item_margin"
+	    android:layout_marginTop="0dp"
+	    android:background="@color/color_title_bg"
+	    >
+    	<ImageView
+    	   android:id="@+id/head_left_arrow"
+    	   android:layout_marginRight="@dimen/title_arrow_margin_to_right"
+    	   
+    	   android:layout_marginLeft="@dimen/title_padding_left"
+    	   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_centerVertical="true"
+	       android:src="@drawable/gome_sys_icon_back"
+	       android:contentDescription="@string/imageview_exit_contentdescription" 
+	       android:onClick="doOnclickUnbindEmailStep1BackButton"
+    	/>
+        <TextView
+	       android:layout_toRightOf="@+id/head_left_arrow"
+           android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:textSize="@dimen/text_title_size"
+	       android:textColor="@color/color_title_text"
+	       
+	       android:text="@string/ui_activity_title_bind_mailbox"
+            />
+        <View 
+           android:layout_width="match_parent"
+	       android:layout_height="@dimen/title_bottom_line_height"
+	       android:background="@color/color_title_bg_bottom_line"
+	       android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+    <LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingTop="0dip"
+		android:paddingBottom="0dip"
+		android:paddingLeft="@dimen/page_left_margin"
+		android:paddingRight="@dimen/page_right_margin">
+		<LinearLayout
+		    android:id="@+id/layout_input_phone_or_mail"
+		    android:layout_width="match_parent"
+			android:layout_height="@dimen/button_default_height"
+			android:orientation="horizontal"
+			android:background="@drawable/gome_edit_background_da"
+		    >
+		    <TextView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				
+           		android:background="@color/color_edittext_backgound"
+         		android:textColor="@color/color_text_edit"
+            	android:textSize="@dimen/text_edit_hint_size"
+            	
+            	android:gravity="left|center_vertical"
+				android:paddingLeft="@dimen/edit_text_hint_padding_left" 	
+				android:paddingRight="@dimen/edit_text_hint_padding_left"
+
+		        android:text="@string/txt_email"
+		        />
+		    <TextView
+		        android:id="@+id/text_email"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:gravity="center_vertical|left"
+		        android:textColor="@color/color_text_edit"
+                android:paddingRight="@dimen/edit_text_hint_padding_left"
+	            android:textSize="@dimen/text_edit_hint_size"
+                android:ellipsize="end"
+                android:singleLine="true"
+                />		
+		</LinearLayout>
+		<FrameLayout
+	       android:id="@+id/laout_reset_pwd_button"
+	       android:layout_width="match_parent"
+	       android:layout_height="match_parent"
+	       android:layout_marginBottom="@dimen/page_bottom_margin">
+		   
+		   <LinearLayout
+		       	android:layout_width="match_parent"
+	       		android:layout_height="wrap_content"
+	       		android:orientation="vertical"
+	       		android:layout_gravity="center_horizontal|bottom"
+		        > 
+		    
+	       <Button
+	           android:id="@+id/btn_unbind_email"
+	           style="@com.gome:style/Widget.GOME.Light.Caution.Button"
+	           android:layout_width="match_parent"
+	           android:layout_height="@dimen/button_default_height"
+	           android:paddingLeft="@dimen/button_padding_left"
+	           android:paddingRight="@dimen/button_padding_right"
+	           android:text="@string/btn_unbind"
+	           android:textSize="@dimen/btn_gome_text_size"
+	           android:layout_gravity="center_horizontal|bottom"
+	           android:onClick="doOnlcikUnbindEmailButton" />
+	       	<TextView
+		            android:id="@+id/txt_cannot_unbind_email_hint"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/button_margin_bottom_text"
+					android:layout_gravity="center_horizontal|bottom"
+			        android:text="@string/text_cannot_unbind_hint"
+			        android:textSize="@dimen/text_text_info_size"
+			        android:textColor="@color/color_text_45"
+			        android:visibility="gone"
+		        />
+	       </LinearLayout>
+	 	</FrameLayout>
+	 </LinearLayout>	
+</LinearLayout>

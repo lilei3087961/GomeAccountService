@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="horizontal" 
+    android:background="@drawable/gome_toast_background_image"
+    >
+	<ProgressBar
+	   android:id = "@+id/progress_commom"
+       android:layout_width="24dp"
+       android:layout_height="24dp"
+	   android:gravity="center_vertical|center_horizontal"
+       style="?android:attr/progressBarStyle"/>
+    <TextView 
+       android:id="@+id/text_progress_commom"
+       android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:text="@string/txt_check_phone_loading"
+       android:textColor="@color/progress_text_color"
+       android:textSize="@dimen/text_dialog_text_size" 
+       android:layout_marginLeft="14dp"
+        />
+</LinearLayout>

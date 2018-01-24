@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:orientation="vertical"
+    tools:context=".BindOrUnbindActivity" >
+	<include layout="@layout/bind_email_step1_layout"/>
+	<include layout="@layout/bind_email_step2_layout"/>
+	<include layout="@layout/unbind_email_step1_layout"/>
+	<include layout="@layout/unbind_email_step2_layout"/>
+	<include layout="@layout/bind_phone_step1_layout"/>
+	<include layout="@layout/unbind_phone_step1_layout"/>
+	<include layout="@layout/unbind_phone_step2_layout"/>
+</FrameLayout>

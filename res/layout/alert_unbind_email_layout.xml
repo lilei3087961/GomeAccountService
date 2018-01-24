@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_more_login_mode_layout"
+    android:orientation="vertical"
+    tools:context=".BindOrUnbindActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_more_login_mode_layout"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dialog_padding_bottom"
+        android:paddingTop="@dimen/dialog_padding_top"
+
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_item_vertical_margin"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/txt_unbind_email"
+                android:textColor="@color/color_text_90"
+                android:textSize="@dimen/dialog_text_title_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
+
+            <Button
+                style="@com.gome:style/Widget.GOME.Light.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginRight="@dimen/dialog_button_margin_right"
+                android:layout_weight="1"
+                android:onClick="doOnclickDismissDialogButton"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:text="@string/txt_set_network_cancel"
+                android:textSize="@dimen/button_text_size"/>
+
+            <Button
+                android:id="@+id/btn_alert_unbind_email"
+                style="@com.gome:style/Widget.GOME.Light.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_weight="1"
+                android:onClick="doOnclickUnbindEmailOkButton"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:text="@string/registerresult_activity_ok"
+                android:textSize="@dimen/button_text_size"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

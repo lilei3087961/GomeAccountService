@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<!--    <LinearLayout
+	    android:id="@+id/layout_sms_verify_code"
+	    android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginBottom="@dimen/button_vertical_margin"
+		android:background="@drawable/gome_edit_background_da"
+		android:paddingRight="@dimen/edit_item_padding_right"
+	    >  -->  
+	    <EditText
+			android:id="@+id/edit"
+			android:singleLine="true"
+			android:layout_width="0dip"
+			android:layout_height="@dimen/button_default_height"
+			android:layout_weight="1"
+			           	
+			android:background="@color/color_edittext_backgound"
+			android:textColor="@color/color_text_edit"
+			android:textColorHint="@color/color_text_edit_hint"
+			android:textSize="@dimen/text_edit_hint_size"
+			
+			android:gravity="center_vertical|left"
+			android:paddingLeft="@dimen/edit_text_hint_padding_left"
+			
+			android:hint="@string/edit_hint_sms_verify_code"
+			android:scrollHorizontally="true"
+		/>
+	    <ImageView
+			android:id="@+id/image_delete_edit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:src="@drawable/gome_sys_icon_delete"
+			android:contentDescription="@drawable/gome_sys_icon_delete"
+			android:layout_marginRight="@dimen/edit_delete_margin_send_sms_right"
+			android:visibility="gone"
+            />
+		<TextView
+            android:id="@+id/text_send_sms_verify_code"
+            
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/button_default_height"
+            
+       		android:background="@color/color_edittext_backgound"
+       		android:textColor="@color/color_button_link"
+           	android:textSize="@dimen/text_send_virify_code_size"
+            
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="@string/btn_text_send_sms_verify_code" />
+<!--   	</LinearLayout>  -->  
+
+</merge>

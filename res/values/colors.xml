@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--    <color name="color_activity_backgound">#FFcccad0</color> -->
+
+    <color name="color_activity_backgound">#FFFFFF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_grey">#EAEAEA</color>
+	<color name="button_text_color_normal">#3a3a3a</color>
+	<color name="color_button_diable_gray">#B6B6D8</color>
+    <color name="gray_line">#d0d0d0</color>
+    <color name="green_light">#0dc16f</color>
+    <color name="gray_light">#f1f1f1</color>
+    <color name="color_black">#000000</color>
+    
+
+    <!-- #FF2E76FC <color name="color_button_link">#77B4FA</color>-->
+    <color name="color_button_background">#FFFFFF</color>
+    
+    
+    <color name="color_text_link">#7B89EF</color>
+    <color name="color_text_line">#9C9C9C</color>
+    <color name="color_text_forget_pwd">#9C9C9C</color> 
+	<color name="color_red">#D7000F</color> 
+	<color name="province_line_border">#C7C7C7</color>
+	<!-- 系统定义 -->
+    <color name="color_title_bg_account_info_main">#FFFFFFFF</color>
+    <color name="color_title_bg">#F1F2F3</color> 
+	<color name="color_title_bg_bottom_line">#FFBFC3C7</color>
+	<color name="color_title_text">#E6000000</color>
+	<color name="color_text_90">#E6000000</color>
+	<color name="color_text_45">#73000000</color>
+	<color name="color_text_edit">#E6000000</color>
+	<color name="color_text_edit_hint">#4D000000</color>
+    <color name="color_text_disable">#4D2E76FC</color>
+	<color name="color_button_link">#FF2E76FC</color>
+	<color name="color_edittext_backgound">#00FFFFFF</color>
+	<!-- list相关 -->
+	<color name="list_arrow">#1F000000</color>
+	<color name="list_left_text_color">#E6000000</color>
+	<color name="list_right_text_color">#73000000</color>
+	<!-- button相关 -->
+	<!-- progress相关 -->
+	<color name="progress_text_color">#FFFFFFFF</color>
+	<!--
+	<color name="btn_gome_text_press_color">#FFFFFF</color>
+	<color name="btn_gome_text_unpress_color">#FF2E76FC</color>
+
+	<color name="btn_gome_text_disable_color">#4D2E76FC</color> -->
+
+	<dimen name="btn_shape_radius">40dp</dimen>
+	<dimen name="btn_text_size">13sp</dimen>
+	<dimen name="btn_shape_border_width">1px</dimen>
+
+	<!--button colors-->
+	<color name="btn_shape_press_color">#FFF2F2F2</color>
+	<color name="btn_shape_unpress_color">#FFFFFF</color>
+	<color name="btn_shape_no_enable_color">#FFFCFCFC</color>
+	<color name="btn_shape_border_color">#FFBFC3C7</color>
+
+	<color name="btn_text_press_color">#FFFFFF</color>
+	<color name="btn_text_unpress_color">#FF0000</color>
+	<color name="btn_text_disable_color">#4D2E76FC</color>
+	<color name="ic_default_actionbar_background_color">#F1F2F3</color>
+	<color name="ic_default_main_layout_background_color">@color/ic_default_actionbar_background_color</color>
+    <color name="gome_normal_black">#FF000000</color>
+    <color name="gome_navigation_background">#FFF2F3F4</color>
+    <color name="navigationbar_divider_color">#26000000</color>
+    <color name="onclick_layout_color">#EBEBEB</color>
+    <color name="subhead_categary_bg">#ffffff</color>
+    <color name="colorTextUnSelected">#E6000000</color>
+    <color name="colorTextSelected">#2E76FC</color>
+</resources>

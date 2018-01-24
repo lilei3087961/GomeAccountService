@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_more_login_mode_layout"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dialog_padding_bottom"
+    android:paddingLeft="@dimen/dialog_padding_left"
+    android:paddingRight="@dimen/dialog_padding_right"
+    android:paddingTop="@dimen/dialog_padding_top"
+    tools:context=".PersonalInfoActivity">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dialog_item_vertical_margin"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_modify_area_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+
+                android:text="@string/txt_area_select"
+                android:textColor="@color/color_text_90"
+
+                android:textSize="@dimen/dialog_text_title_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_item_vertical_margin"
+            android:orientation="horizontal">
+
+            <com.gome.gomeaccountservice.area.WheelView
+                android:id="@+id/id_province"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></com.gome.gomeaccountservice.area.WheelView>
+
+            <com.gome.gomeaccountservice.area.WheelView
+                android:id="@+id/id_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></com.gome.gomeaccountservice.area.WheelView>
+
+            <com.gome.gomeaccountservice.area.WheelView
+                android:id="@+id/id_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></com.gome.gomeaccountservice.area.WheelView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp">
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_default_height"
+            android:layout_marginRight="@dimen/dialog_button_margin_right"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gome_shape_techain"
+            android:onClick="doOnclickModifyAreaCancelButton"
+            android:paddingLeft="@dimen/button_padding_left"
+            android:paddingRight="@dimen/button_padding_right"
+            android:text="@string/txt_set_network_cancel"
+            android:textColor="@drawable/btn_gome_button_text_color"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_default_height"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gome_shape_techain"
+            android:onClick="doOnclickModifyAreaOkButton"
+            android:paddingLeft="@dimen/button_padding_left"
+            android:paddingRight="@dimen/button_padding_right"
+            android:text="@string/registerresult_activity_ok"
+            android:textColor="@drawable/btn_gome_button_text_color"
+            android:textSize="@dimen/button_text_size" />
+    </LinearLayout>
+</LinearLayout>

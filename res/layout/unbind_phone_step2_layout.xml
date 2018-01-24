@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_unbind_phone_step2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_activity_backgound"
+    android:orientation="vertical"
+    tools:context=".BindOrUnbindActivity" >
+
+		<!-- 标题布局 -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height" 
+	    android:layout_marginBottom="0dp"
+	    android:layout_marginTop="0dp"
+	    android:background="@color/color_title_bg"
+	    >
+    	<ImageView
+    	   android:id="@+id/head_left_arrow"
+    	   android:layout_marginRight="@dimen/title_arrow_margin_to_right"
+    	   
+    	   android:layout_marginLeft="@dimen/title_padding_left"
+    	   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_centerVertical="true"
+	       
+	       android:src="@drawable/gome_sys_icon_back"
+	       android:contentDescription="@string/imageview_exit_contentdescription" 
+	       android:onClick="doOnclickUnbindPhoneStep2BackButton"
+    	/>
+        <TextView 
+	       android:layout_toRightOf="@+id/head_left_arrow"
+	       
+           android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:textSize="@dimen/text_title_size"
+	       android:textColor="@color/color_title_text"
+	       
+	       android:text="@string/ui_activity_title_phone_verify"
+            />
+        <View 
+           android:layout_width="match_parent"
+	       android:layout_height="@dimen/title_bottom_line_height"
+	       android:background="@color/color_title_bg_bottom_line"
+	       android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout 
+	  	android:id="@+id/layout_retrieve_pwd_by_phone"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="@dimen/page_top_item_margin"
+		android:paddingBottom="@dimen/page_bottom_item_margin"
+		android:paddingLeft="@dimen/page_left_margin"
+		android:paddingRight="@dimen/page_right_margin">
+	    <TextView
+	        android:id="@+id/text_phone_unbind_step2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="@dimen/activity_item_vertical_margin"
+			android:textSize="@dimen/text_info_size_20"
+			android:textColor="@color/color_text_90"
+	        android:layout_gravity="center_horizontal"
+	        />
+			<!--  android:text="18212345678"-->
+			<!--step 2 手机号验证 发送验证码 -->
+			<LinearLayout
+			    android:id="@+id/layout_sms_verify_code"
+				android:background="@drawable/gome_edit_background_da"
+				android:paddingRight="@dimen/edit_item_padding_right"
+			    android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+
+				android:orientation="horizontal"
+			    >
+			    <EditText
+	                android:id="@+id/edit_unbind_sms_verify_code"
+	                android:singleLine="true"
+	            	android:layout_width="0dip"
+	            	android:layout_height="@dimen/button_default_height"
+	            	android:layout_weight="1"
+	            	
+	           		android:background="@color/color_edittext_backgound"
+	           		android:textColorHint="@color/color_text_edit_hint"
+	           		
+	         		android:textColor="@color/color_text_edit"
+	            	android:textSize="@dimen/text_edit_hint_size"
+	            	
+	            	android:gravity="center_vertical|left"
+	            	android:paddingLeft="@dimen/edit_text_hint_padding_left"
+	            	android:hint="@string/edit_hint_sms_verify_code"
+	            	
+	                android:scrollHorizontally="true"
+				/>
+			    <ImageView 
+	                android:id="@+id/image_delete_sms_verify_code_for_unbind_phone"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	         		android:src="@drawable/gome_sys_icon_delete"
+	         		android:contentDescription="@drawable/gome_sys_icon_delete"
+	            	android:layout_marginRight="@dimen/edit_delete_margin_send_sms_right"
+	                android:onClick="doOnclickDeleteSmsVerifyCodeButton"
+	                android:visibility="gone"
+	                />
+				<TextView
+		            android:id="@+id/text_unbind_send_sms_verify_code"
+		            
+	                android:layout_width="wrap_content"
+	                android:layout_height="@dimen/button_default_height"
+		            
+	         		android:background="@color/color_edittext_backgound"
+	         		android:textColor="@color/color_button_link"
+	            	android:textSize="@dimen/text_send_virify_code_size"
+		            
+		            android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+		            android:text="@string/btn_text_send_sms_verify_code"
+		            android:onClick="doOnclikUnbindSendSmsVerifyCode" />
+			</LinearLayout>
+		<FrameLayout
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_marginTop="@dimen/button_margin_top"
+		>
+	       <Button
+	           android:id="@+id/btn_unbind_phone_complete"
+	           android:enabled="false"
+               style="@com.gome:style/Widget.GOME.Light.Button"
+			   android:layout_width="match_parent"
+			   android:layout_height="@dimen/button_default_height"
+			   android:paddingLeft="@dimen/button_padding_left"
+			   android:paddingRight="@dimen/button_padding_right"
+	           android:textSize="@dimen/btn_gome_text_size"
+	           android:text="@string/btn_complete"
+	           android:layout_gravity="center_horizontal"
+	           android:onClick="doOnlcikUnbindPhoneConpleteButton" />
+	 	</FrameLayout>
+	 </LinearLayout>
+    </ScrollView>
+</LinearLayout>

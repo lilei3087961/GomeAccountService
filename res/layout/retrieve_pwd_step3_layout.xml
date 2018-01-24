@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    	tools:context=".RetrievePwdActivity" 
+        android:id="@+id/retrieve_pwd_step3_layout"
+        android:orientation="vertical"
+	    android:background="@color/color_activity_backgound"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+    >
+   	<!-- 标题布局 -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height" 
+	    android:layout_marginBottom="@dimen/page_top_item_margin"
+	    android:layout_marginTop="0dp"
+	    android:background="@color/color_title_bg"
+	    >
+    	<ImageView
+    	   android:id="@+id/head_left_arrow"
+    	   android:layout_marginRight="@dimen/title_arrow_margin_to_right"
+    	   
+    	   android:layout_marginLeft="@dimen/title_padding_left"
+    	   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_centerVertical="true"
+	       android:src="@drawable/gome_sys_icon_back"
+	       android:contentDescription="@string/imageview_exit_contentdescription" 
+	       android:onClick="doOnclickStep3BackButton"
+    	/>
+        <TextView 
+	       android:layout_toRightOf="@+id/head_left_arrow"
+           android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:textSize="@dimen/text_title_size"
+	       android:textColor="@color/color_title_text"
+	       
+	       android:text="@string/ui_activity_title_new_pwd"
+            />
+        <View 
+           android:layout_width="match_parent"
+	       android:layout_height="@dimen/title_bottom_line_height"
+	       android:background="@color/color_title_bg_bottom_line"
+	       android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+    <LinearLayout 
+	  	android:id="@+id/layout_retrieve_pwd_by_phone"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="0dip"
+		android:paddingBottom="0dip"
+		android:paddingLeft="@dimen/page_left_margin"
+		android:paddingRight="@dimen/page_right_margin" >
+		<!--step 3  输入新密码 -->
+		<LinearLayout
+		    android:layout_marginBottom="@dimen/button_vertical_margin"
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="@drawable/gome_edit_background_da"
+			android:paddingRight="@dimen/edit_item_padding_right"
+		    >
+			<!-- 输入新密码 -->
+	        <EditText
+	            android:id="@+id/edit_new_password"
+	            android:singleLine="true"
+	           	android:layout_width="0dip"
+	           	android:layout_weight="1"
+	           	android:layout_height="@dimen/button_default_height"
+	           	
+           		android:background="@color/color_edittext_backgound"
+         		android:textColor="@color/color_text_edit"
+         		android:textColorHint="@color/color_text_edit_hint"
+            	android:textSize="@dimen/text_edit_hint_size"
+	           	
+           		android:gravity="center_vertical|left"
+            	android:paddingLeft="@dimen/edit_text_hint_padding_left"
+	           	android:hint="@string/txt_new_pwd"
+	           	
+	            android:scrollHorizontally="true"
+	
+	            android:inputType="textPassword" />
+	         <ImageView 
+                android:id="@+id/image_delete_input_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+         		android:src="@drawable/gome_sys_icon_delete"
+         		android:contentDescription="@drawable/gome_sys_icon_delete"
+            	android:layout_marginRight="0dp"
+                android:onClick="doOnclickDeleteInputPwdButton"
+                android:visibility="gone"
+                />
+              <ImageView
+                    android:id="@+id/image_hide_password_for_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gome_btn_show_password"
+                    android:contentDescription="@drawable/gome_btn_show_password"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/edit_password_image_internal_margin"
+                    android:onClick="doOnclickHidePasswordForPassword"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/image_show_password_for_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/gome_btn_hide_password"
+                    android:contentDescription="@drawable/gome_btn_hide_password"
+                    android:layout_marginLeft="@dimen/edit_password_image_internal_margin"
+					android:onClick="doOnclickShowPasswordForPassword"
+                    />
+	   </LinearLayout>
+       <!-- 再次输入密码 -->
+	   <LinearLayout
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content"
+		  android:orientation="horizontal"
+		  android:background="@drawable/gome_edit_background_da"
+		  android:paddingRight="@dimen/edit_item_padding_right"
+			   >
+           <EditText
+				android:id="@+id/edit_confirm_new_password"
+				android:singleLine="true"
+				android:layout_width="0dip"
+	           	android:layout_weight="1"
+				android:layout_height="@dimen/button_default_height"
+				
+           		android:background="@color/color_edittext_backgound"
+         		android:textColor="@color/color_text_edit"
+         		android:textColorHint="@color/color_text_edit_hint"
+            	android:textSize="@dimen/text_edit_hint_size"
+				
+				android:gravity="center_vertical|left"
+            	android:paddingLeft="@dimen/edit_text_hint_padding_left"
+				android:hint="@string/txt_confirm_new_pwd"
+           	
+				android:scrollHorizontally="true"
+				android:inputType="textPassword" />
+           	 <ImageView 
+                android:id="@+id/image_delete_input_password_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+         		android:src="@drawable/gome_sys_icon_delete"
+         		android:contentDescription="@drawable/gome_sys_icon_delete"
+            	android:layout_marginRight="0dp"
+                android:onClick="doOnclickDeleteInputPwdAgainButton"
+                android:visibility="gone"
+                />
+			  <ImageView
+                    android:id="@+id/image_hide_password_for_password_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gome_btn_show_password"
+                    android:contentDescription="@drawable/gome_btn_show_password"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/edit_password_image_internal_margin"
+                    android:onClick="doOnclickHidePasswordForPasswordAgain"
+                    android:visibility="gone"
+                    />
+                <ImageView
+                    android:id="@+id/image_show_password_for_password_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/gome_btn_hide_password"
+                    android:contentDescription="@drawable/gome_btn_hide_password"
+                    android:layout_marginLeft="@dimen/edit_password_image_internal_margin"
+					android:onClick="doOnclickShowPasswordForPasswordAgain"
+                    />
+        </LinearLayout>
+        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/password_margin_top"
+				android:paddingLeft="@dimen/edit_text_hint_padding_left"
+				android:layout_gravity="left|bottom"
+		        android:text="@string/txt_password_reminder"
+		        android:textSize="@dimen/text_text_info_size"
+		        android:textColor="@color/color_text_45"
+	        />
+		<FrameLayout
+	       android:id="@+id/laout_reset_pwd_button"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+		   android:layout_marginTop="@dimen/button_margin_top"
+	       android:paddingLeft="0dip"
+	       android:paddingRight="0dip">
+	       <Button
+	           android:id="@+id/btn_step3_complete"
+               style="@com.gome:style/Widget.GOME.Light.Button"
+			   android:layout_width="match_parent"
+			   android:layout_height="@dimen/button_default_height"
+			   android:paddingLeft="@dimen/button_padding_left"
+			   android:paddingRight="@dimen/button_padding_right"
+			   android:text="@string/btn_complete"
+	           android:enabled="false"
+	           android:textSize="@dimen/btn_gome_text_size"
+	           android:layout_gravity="center_horizontal"
+	           android:onClick="doOnlcikStep3CompleteButton" />
+	 	</FrameLayout>
+	 </LinearLayout>	
+</LinearLayout>

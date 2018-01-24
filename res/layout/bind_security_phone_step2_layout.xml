@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_bind_security_phone_step2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_activity_backgound"
+    android:orientation="vertical"
+    tools:context=".PasswordSecurityActivity" >
+
+	<!-- 标题布局 -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height" 
+	    android:layout_marginBottom="0dp"
+	    android:layout_marginTop="0dp"
+	    android:background="@color/color_title_bg"
+	    >
+    	<ImageView
+    	   android:id="@+id/head_left_arrow"
+    	   android:layout_marginRight="@dimen/title_arrow_margin_to_right"
+    	   android:layout_marginLeft="@dimen/title_padding_left"
+    	   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_centerVertical="true"
+	       
+	       android:src="@drawable/gome_sys_icon_back"
+	       android:contentDescription="@string/imageview_exit_contentdescription" 
+	       android:onClick="doOnclickSecurityPhoneStep2BackButton"
+    	/>
+        <TextView 
+	       android:layout_toRightOf="@+id/head_left_arrow"
+           android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:textSize="@dimen/text_title_size"
+	       android:textColor="@color/color_title_text"
+	       
+	       android:text="@string/ui_activity_title_set_and_verify_security_phone_number"
+            />
+        <View 
+           android:layout_width="match_parent"
+	       android:layout_height="@dimen/title_bottom_line_height"
+	       android:background="@color/color_title_bg_bottom_line"
+	       android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/layout_retrieve_pwd_by_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="14dip"
+        android:paddingLeft="@dimen/page_left_margin"
+        android:paddingRight="@dimen/page_right_margin"
+        android:paddingTop="@dimen/page_top_item_margin">
+
+        <LinearLayout
+            android:id="@+id/layout_input_security_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/button_vertical_margin"
+            android:background="@drawable/gome_edit_background_da"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/edit_item_padding_right"
+            >
+
+            <EditText
+                android:id="@+id/edit_security_phone"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_weight="1"
+                android:background="@color/color_edittext_backgound"
+                android:inputType="number"
+                android:gravity="center_vertical|left"
+                android:hint="@string/edit_hint_bind_phone"
+                android:paddingLeft="@dimen/edit_text_hint_padding_left"
+                android:scrollHorizontally="true"
+
+                android:singleLine="true"
+                android:textColor="@color/color_text_edit"
+                android:textColorHint="@color/color_text_edit_hint"
+                android:textSize="@dimen/text_edit_hint_size"
+
+                />
+
+            <ImageView
+                android:id="@+id/image_delete_bind_security_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@drawable/gome_sys_icon_delete"
+                android:onClick="doOnclickDeleteBindSecurityPhoneButton"
+                android:src="@drawable/gome_sys_icon_delete"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <!--step 2 手机号验证 发送验证码 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gome_edit_background_da"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/edit_item_padding_right"
+            >
+
+            <EditText
+                android:id="@+id/edit_bind_security_phone_sms_verify_code"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_weight="1"
+                android:background="@color/color_edittext_backgound"
+
+                android:gravity="center_vertical|left"
+                android:hint="@string/edit_hint_sms_verify_code"
+                android:paddingLeft="@dimen/edit_text_hint_padding_left"
+                android:scrollHorizontally="true"
+
+                android:singleLine="true"
+                android:textColor="@color/color_text_edit"
+                android:textColorHint="@color/color_text_edit_hint"
+
+                android:textSize="@dimen/text_edit_hint_size"
+                />
+
+            <ImageView
+                android:id="@+id/image_delete_sms_verify_code_for_bind_security_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@drawable/gome_sys_icon_delete"
+                android:onClick="doOnclickDeleteSmsVerifyCodeForBindSecurityPhoneButton"
+                android:src="@drawable/gome_sys_icon_delete"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/text_bind_security_phone_send_sms_verify_code"
+
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_default_height"
+
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/color_edittext_backgound"
+                android:onClick="doOnclikSecurityPhoneSendSmsVerifyCode"
+
+                android:text="@string/btn_text_send_sms_verify_code"
+                android:textColor="@color/color_button_link"
+                android:textSize="@dimen/text_send_virify_code_size"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:paddingLeft="0dip"
+            android:paddingRight="0dip">
+
+            <Button
+                android:id="@+id/btn_bind_security_phone"
+                style="@com.gome:style/Widget.GOME.Light.Button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_gravity="center_horizontal"
+                android:enabled="false"
+                android:onClick="doOnclickBindSecurityPhoneCompleteButton"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:text="@string/btn_complete"
+                android:textSize="@dimen/text_info_size"/>
+        </FrameLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

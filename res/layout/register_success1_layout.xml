@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_selector"
+    android:orientation="vertical"
+    tools:context=".AccountInfoActivity" >
+
+ 	<LinearLayout 
+            android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginBottom="0dp"
+			android:background="@drawable/layout_selector"
+			android:paddingBottom="@dimen/dialog_padding_bottom"
+			android:paddingTop="@dimen/dialog_padding_top"
+            >
+            <LinearLayout 
+                android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginBottom="@dimen/dialog_item_vertical_margin"
+               >
+                <TextView 
+                   android:id="@+id/text_register_success1_prompt"
+                   android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:gravity="left"
+			       android:textSize="@dimen/text_dialog_text_size"
+			       android:textColor="@color/color_text_45"
+			       android:text="@string/txt_register_success_info1_all"
+                    />   
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+                >
+                <Button 
+                   style="@com.gome:style/Widget.GOME.Light.Button"
+				   android:layout_width="0dp"
+				   android:layout_weight="1"
+				   android:layout_height="@dimen/button_default_height"
+				   android:paddingLeft="@dimen/button_padding_left"
+				   android:paddingRight="@dimen/button_padding_right"
+		           android:textSize="@dimen/btn_gome_text_size"
+		           android:layout_marginRight="@dimen/dialog_button_margin_right"
+		           android:text="@string/btn_talk_later"
+		           android:onClick="doOnlcikStep4PublicTalkLaterButton" />
+                <Button
+                    style="@com.gome:style/Widget.GOME.Light.Button"
+				   android:layout_width="0dp"
+				   android:layout_weight="1"
+				   android:layout_height="@dimen/button_default_height"
+				   android:paddingLeft="@dimen/button_padding_left"
+				   android:paddingRight="@dimen/button_padding_right"
+		           android:textSize="@dimen/btn_gome_text_size"
+		           android:text="@string/btn_go_setup"
+		           android:onClick="doOnlcikStep4PublicGoSetButton" />
+            </LinearLayout>    
+        </LinearLayout>
+ 
+</LinearLayout>

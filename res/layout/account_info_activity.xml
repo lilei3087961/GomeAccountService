@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_register_step4_public"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:orientation="vertical"
+    tools:context=".AccountInfoActivity" >
+
+   	<include layout="@layout/account_info_main_layout"/>
+	<include layout="@layout/register_step5_public_layout"/>
+	<include layout="@layout/register_step6_public_layout"/>
+	<include layout="@layout/register_step7_mail_layout"/>
+	<include layout="@layout/register_step7_phone_layout"/>
+	<include layout="@layout/register_step8_phone_layout"/>
+    <include layout="@layout/public_check_pwd"/>
+</FrameLayout>

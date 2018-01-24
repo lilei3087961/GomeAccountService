@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_more_login_mode_layout"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+
+    tools:context=".PersonalInfoActivity" >
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip"
+		android:layout_marginBottom="@dimen/dialog_item_vertical_margin"
+        >
+        <LinearLayout 
+         	android:layout_width="match_parent"
+         	android:layout_height="wrap_content" 
+			android:orientation="horizontal"
+			android:gravity="center_horizontal"
+			android:layout_marginBottom="@dimen/dialog_item_vertical_margin"
+         >
+			<TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/txt_modify_sex"
+            	android:textSize="@dimen/dialog_text_title_size"
+            	android:textColor="@color/color_text_90"
+            	android:gravity="center_vertical|center_horizontal"
+             />
+        </LinearLayout>
+
+ 
+        <RelativeLayout 
+         	android:layout_width="match_parent"
+         	android:layout_height="wrap_content" 
+			android:orientation="horizontal"
+			android:layout_marginBottom="@dimen/dialog_item_vertical_margin"
+			android:onClick="doOnclickSexManItem"
+         >
+			<TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/txt_sex_man"
+            	android:textSize="@dimen/dialog_text_info_size"
+				android:textColor="@color/color_text_90"
+            	android:layout_alignParentLeft="true"
+            	android:layout_centerVertical="true"
+            	android:gravity="center_vertical"
+             />
+			 <RadioButton  
+		           android:id="@+id/radio_man" 
+		           android:theme="@com.gome:style/Theme.GOME.Light"
+		           android:layout_width="wrap_content"  
+		           android:layout_height="wrap_content"  
+		           android:layout_alignParentRight="true"
+		           android:gravity="center_vertical"
+		           android:clickable="false"
+		           android:checked="true"   />  
+        </RelativeLayout>
+
+       	<RelativeLayout 
+         	android:layout_width="match_parent"
+         	android:layout_height="wrap_content" 
+			android:orientation="horizontal"
+			android:onClick="doOnclickSexWomanItem"
+         >
+			<TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/txt_sex_woman"
+                android:textColor="@color/color_text_90"
+            	android:textSize="@dimen/dialog_text_info_size"
+            	android:layout_alignParentLeft="true"
+            	android:layout_centerVertical="true"
+            	android:gravity="center_vertical"
+             />
+			 <RadioButton  
+	            android:id="@+id/radio_woman" 
+	            android:theme="@com.gome:style/Theme.GOME.Light"
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:layout_alignParentRight="true"
+            	android:gravity="center_vertical"
+            	android:clickable="false"
+	            android:checked="false"   />  
+        </RelativeLayout>
+        	
+   </LinearLayout>
+   <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" >
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_bind_security_phone_step1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_activity_backgound"
+    android:orientation="vertical"
+    tools:context=".PasswordSecurityActivity" >
+
+<!-- 标题布局 -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height" 
+	    android:layout_marginBottom="0dp"
+	    android:layout_marginTop="0dp"
+	    android:background="@color/color_title_bg"
+	    >
+    	<ImageView
+    	   android:id="@+id/head_left_arrow"
+    	   android:layout_marginRight="@dimen/title_arrow_margin_to_right"
+    	   
+    	   android:layout_marginLeft="@dimen/title_padding_left"
+    	   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_centerVertical="true"
+	       
+	       android:src="@drawable/gome_sys_icon_back"
+	       android:contentDescription="@string/imageview_exit_contentdescription" 
+	       android:onClick="doOnclickSecurityPhoneStep1BackButton"
+    	/>
+        <TextView
+	       android:layout_toRightOf="@+id/head_left_arrow"
+           android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:textSize="@dimen/text_title_size"
+	       android:textColor="@color/color_title_text"
+	       
+	       android:text="@string/ui_activity_title_security_phone_number"
+            />
+        <View 
+           android:layout_width="match_parent"
+	       android:layout_height="@dimen/title_bottom_line_height"
+	       android:background="@color/color_title_bg_bottom_line"
+	       android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+    <LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingTop="0dip"
+		android:layout_marginTop="150dp"
+		android:paddingBottom="0dip"
+		android:paddingLeft="@dimen/page_left_margin"
+		android:paddingRight="@dimen/page_right_margin">
+        <LinearLayout
+		    android:id="@+id/layout_input_phone_or_mail"
+		    android:layout_marginBottom="@dimen/activity_item_vertical_margin"
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+		    >
+		    <ImageView
+		        android:layout_width="90dp"
+		        android:layout_height="90dp"
+		        android:src="@drawable/gome_sys_icon_safety"
+		        android:contentDescription="@drawable/security_phone"
+		        android:layout_gravity="center_horizontal"
+		        />
+        </LinearLayout>
+		<!-- -->
+		<LinearLayout
+		    android:layout_marginBottom="@dimen/activity_item_vertical_margin"
+		    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+		    >
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="@dimen/text_text_info_size"
+	        	android:textColor="@color/color_text_45"
+			    android:text="@string/txt_security_phone_number_prompt"
+			     />
+	
+		</LinearLayout>
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginBottom="@dimen/page_bottom_margin"
+			android:paddingLeft="0dip"
+			android:paddingRight="0dip">
+			<Button
+                style="@com.gome:style/Widget.GOME.Light.Button"
+			    android:layout_width="match_parent"
+			    android:layout_height="@dimen/button_default_height"
+			    android:paddingLeft="@dimen/button_padding_left"
+			    android:paddingRight="@dimen/button_padding_right"
+			    android:textSize="@dimen/btn_gome_text_size"
+			    android:layout_gravity="center_horizontal|bottom"
+			    android:text="@string/btn_set_now"
+			    android:onClick="doOnclickSecurityPhoneStep1SetNowButton" />
+	 	</FrameLayout>
+	 </LinearLayout>	
+</LinearLayout>

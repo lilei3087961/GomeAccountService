@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:orientation="vertical"
+    android:background="@color/color_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<include layout="@layout/register_step1_public_layout"/>
+	<include layout="@layout/boot_wizard_verify_sms_code_layout"/>
+	<include layout="@layout/register_step1_mail_layout"/>
+	<include layout="@layout/register_step2_mail_layout"/>
+	<include layout="@layout/register_step2_phone_layout"/>
+	<include layout="@layout/register_step3_public_layout"/>
+</FrameLayout>

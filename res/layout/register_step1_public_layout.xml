@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_register_step1_public"
+    android:orientation="vertical"
+    android:background="@color/color_activity_backgound"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity" >
+	<!-- 标题布局 -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height" 
+	    android:layout_marginBottom="@dimen/page_top_item_margin"
+	    android:layout_marginTop="0dp"
+	    android:background="@color/color_title_bg"
+	    >
+    	<ImageView
+    	   android:id="@+id/head_left_arrow"
+    	   android:layout_marginRight="@dimen/title_arrow_margin_to_right"
+    	   
+    	   android:layout_marginLeft="@dimen/title_padding_left"
+    	   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_centerVertical="true"
+	       android:src="@drawable/gome_sys_icon_back"
+	       android:contentDescription="@string/imageview_exit_contentdescription" 
+	       android:onClick="doOnclickStep1PublicBackButton"
+    	/>
+        <TextView
+	       android:layout_toRightOf="@+id/head_left_arrow"
+	       
+           android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:textSize="@dimen/text_title_size"
+	       android:textColor="@color/color_title_text"
+	       
+	       android:text="@string/ui_activity_title_register"
+            />
+        <View 
+           android:layout_width="match_parent"
+	       android:layout_height="@dimen/title_bottom_line_height"
+	       android:background="@color/color_title_bg_bottom_line"
+	       android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+    <LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingBottom="0dip"
+		android:paddingLeft="@dimen/page_left_margin"
+		android:paddingRight="@dimen/page_right_margin">
+		<!--step 1 输入手机号或邮箱布局 -->
+		<LinearLayout
+			    android:id="@+id/layout_input_phone_or_mail"
+			    android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+            	android:background="@drawable/gome_edit_background_da"
+            	android:paddingRight="@dimen/edit_item_padding_right"
+			    >
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_weight="1"
+                android:background="@color/color_edittext_backgound"
+                android:inputType="number"
+                android:gravity="center_vertical|left"
+                android:hint="@string/edit_hint_phone"
+                android:paddingLeft="@dimen/edit_text_hint_padding_left"
+                android:scrollHorizontally="true"
+
+                android:singleLine="true"
+                android:textColor="@color/color_text_edit"
+                android:textColorHint="@color/color_text_edit_hint"
+                android:textSize="@dimen/text_edit_hint_size"
+
+                />
+
+            <ImageView 
+	                android:id="@+id/image_delete_account_phone"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	         		android:src="@drawable/gome_sys_icon_delete"
+	         		android:contentDescription="@drawable/gome_sys_icon_delete"
+	            	android:textSize="@dimen/text_info_size"
+	                android:onClick="doOnclickDeleteAccountPhoneButton"
+	                android:visibility="gone"
+	                />				
+		</LinearLayout>
+        <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="@dimen/button_vertical_margin"
+           android:gravity="right"
+           android:paddingRight="20dp" >
+
+           <TextView
+               android:id="@+id/txt_email_register"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right"
+               android:background="@color/color_activity_backgound"
+               android:onClick="doOnclickEmailRegister"
+               android:text="@string/txt_email_register"
+               android:textColor="@color/color_button_link"
+               android:textSize="@dimen/text_text_info_size" />
+      	</LinearLayout>
+		<FrameLayout
+	       android:id="@+id/laout_step1_public_next_button"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:layout_marginTop="@dimen/button_margin_top_with_button_link"
+	       android:paddingTop="0dip"
+	       android:paddingLeft="0dip"
+	       android:paddingRight="0dip">
+
+            <Button
+                android:id="@+id/btn_step1_phone_next"
+                style="@com.gome:style/Widget.GOME.Light.Button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_gravity="center_horizontal"
+                android:enabled="false"
+                android:onClick="doOnclickStep1PublicNextButton"
+                android:text="@string/btn_next_step"
+                android:textSize="@dimen/btn_gome_text_size"/>
+        </FrameLayout>
+	 </LinearLayout>
+	 <LinearLayout 
+	     	android:id="@+id/layout_step1_public_boot_wizard_boottom"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:gravity="bottom"
+			android:paddingBottom="14dp"
+			>
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="12dp"
+             android:gravity="bottom"
+             android:visibility="visible"
+             >
+
+             <ImageView
+                 android:id="@+id/boot_wizard_left_arrow"
+                 android:layout_width="@dimen/list_arrow_width"
+                 android:layout_height="@dimen/list_arrow_height"
+                 android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="14dp"
+                 android:contentDescription="@string/imageview_exit_contentdescription"
+                 android:onClick="doOnclickStep1PublicBackButton"
+                 android:src="@drawable/boot_wizard_arrow_left"
+                 />
+
+             <Button
+                 style="@style/AppButtonStyle.Bottom"
+                 android:id="@+id/textView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="2dp"
+                 android:layout_toRightOf="@+id/boot_wizard_left_arrow"
+                 android:onClick="doOnclickStep1PublicBackButton"
+                 android:text="@string/btn_pre_step"
+                 android:textColor="@color/color_title_text"
+                 android:textSize="@dimen/text_title_size"/>
+
+             <Button
+                 style="@style/AppButtonStyle.Bottom"
+                 android:id="@+id/text_step1_public_boot_wizard_next_button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignTop="@+id/textView"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginRight="2dp"
+                 android:layout_toLeftOf="@+id/image_step1_public_boot_wizard_right_arrow"
+                 android:text="@string/btn_next_step"
+                 android:textColor="@color/color_text_disable"
+                 android:textSize="@dimen/text_title_size"/>
+
+             <ImageView
+                 android:id="@+id/image_step1_public_boot_wizard_right_arrow"
+                 android:layout_width="@dimen/list_arrow_width"
+                 android:layout_height="@dimen/list_arrow_height"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginRight="14dp"
+                 android:contentDescription="@string/imageview_exit_contentdescription"
+                 android:src="@drawable/boot_wizard_arrow_right_disable"
+                 />
+         </RelativeLayout>
+     </LinearLayout>		
+</LinearLayout>

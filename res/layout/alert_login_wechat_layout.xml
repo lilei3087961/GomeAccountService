@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	  android:paddingTop="0dip"
+    android:paddingBottom="0dip"
+    android:background="@drawable/drawable_more_login_mode_layout"
+    android:orientation="vertical" >
+    <!-- shape_more_login_mode_layout -->
+    <LinearLayout
+        android:id="@+id/layoutMoreLoginMode"
+        android:background="@drawable/drawable_more_login_mode_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+		    android:paddingTop="0dp"
+        android:paddingBottom="20dp"
+        android:visibility="visible"
+        >
+        <RelativeLayout
+  		      android:layout_width="match_parent"
+  		      android:layout_centerHorizontal="true"
+  		      android:layout_height="wrap_content" >
+            <LinearLayout 
+               	android:layout_width="match_parent"
+               	android:layout_height="wrap_content" 
+      			    android:orientation="vertical"
+  			        android:gravity="center_horizontal"
+  			        android:paddingLeft="0dip"
+          	    android:paddingRight="0dip"
+          	    android:onClick="doOnclickWeixinLogin"
+            >
+
+      			<ImageView 
+      			    android:layout_width="wrap_content"
+      	        android:layout_height="wrap_content" 
+      			    android:src="@drawable/weixin"
+      			    android:layout_marginBottom="5dp"
+      			    android:contentDescription="@drawable/weixin"
+      			    />
+  	        <TextView
+  	             android:layout_width="wrap_content"
+  	             android:layout_height="wrap_content"
+  	             android:gravity="center_vertical|center_horizontal"
+  	             android:text="@string/txt_login_bottom_weixin_login"
+  	             android:textSize="@dimen/text_dialog_text_size"
+              	 android:textColor="@color/color_text_90" />
+  		      </LinearLayout>        	
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

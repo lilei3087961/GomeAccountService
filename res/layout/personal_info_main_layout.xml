@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_personal_info_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_activity_backgound"
+    android:orientation="vertical"
+    tools:context=".PersonalInfoActivity" >
+ 	<!-- 标题布局 -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height" 
+	    android:layout_marginBottom="0dp"
+	    android:layout_marginTop="0dp"
+	    android:background="@color/color_title_bg"
+	    >
+    	<ImageView
+    	   android:id="@+id/head_left_arrow"
+    	   android:layout_marginRight="@dimen/title_arrow_margin_to_right"
+    	   android:layout_marginLeft="@dimen/title_padding_left"
+    	   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_centerVertical="true"
+	       
+	       android:src="@drawable/gome_sys_icon_back"
+	       android:contentDescription="@string/imageview_exit_contentdescription" 
+	       android:onClick="doOnclickPersonalInfoBackButton"
+    	/>
+        <TextView
+	       android:layout_toRightOf="@+id/head_left_arrow"
+           android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:textSize="@dimen/text_title_size"
+	       android:textColor="@color/color_title_text"
+	       
+	       android:text="@string/ui_activity_title_personal_info"
+            />
+        <View 
+           android:layout_width="match_parent"
+	       android:layout_height="@dimen/title_bottom_line_height"
+	       android:background="@color/color_title_bg_bottom_line"
+	       android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dip"
+        android:paddingTop="0dip">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:background="@drawable/layout_background_selector"
+                    android:onClick="doOnclickAvatarItem"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/page_left_margin"
+                    android:paddingRight="@dimen/list_arrow_margin_right"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/txt_avatar"
+                        android:textColor="@color/list_left_text_color"
+
+                        android:textSize="@dimen/list_left_text_size"
+                        />
+
+                    <com.gome.gomeaccountservice.CircleImageView
+                        android:id="@+id/image_avatar"
+                        android:layout_width="@dimen/avatar_image_width_small"
+                        android:layout_height="@dimen/avatar_image_height_small"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toLeftOf="@+id/image_arrow_avatar"
+                        android:contentDescription="@string/imageview_avatar_contentdescription"
+                        android:src="@drawable/gome_sys_icon_head_xiao"/>
+
+                    <ImageView
+                        android:id="@+id/image_arrow_avatar"
+
+                        android:layout_width="@dimen/list_arrow_width"
+                        android:layout_height="@dimen/list_arrow_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/list_arrow_margin_left"
+                        android:contentDescription="@drawable/gome_sys_icon_right"
+                        android:src="@drawable/gome_sys_icon_right"
+                        />
+                </RelativeLayout>
+                <!-- 分割线  -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_gome_shape_border_width"
+                    android:layout_marginLeft="@dimen/page_left_margin"
+                    android:background="@color/list_arrow"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:background="@drawable/layout_background_selector"
+                    android:onClick="doOnclickNickNameItem"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/page_left_margin"
+                    android:paddingRight="@dimen/list_arrow_margin_right"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/txt_nick_name"
+                        android:textColor="@color/list_left_text_color"
+                        android:textSize="@dimen/list_left_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_nick_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toLeftOf="@+id/image_arrow_nick_name"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:textColor="@color/list_right_text_color"
+                        android:textSize="@dimen/list_right_text_size"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_arrow_nick_name"
+                        android:layout_width="@dimen/list_arrow_width"
+                        android:layout_height="@dimen/list_arrow_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/list_arrow_margin_left"
+                        android:contentDescription="@drawable/gome_sys_icon_right"
+                        android:src="@drawable/gome_sys_icon_right"
+                        />
+                </RelativeLayout>
+                <!-- 分割线  -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_gome_shape_border_width"
+                    android:layout_marginLeft="@dimen/page_left_margin"
+                    android:background="@color/list_arrow"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:background="@drawable/layout_background_selector"
+                    android:onClick="doOnclickGomeIdItem"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/page_left_margin"
+                    android:paddingRight="@dimen/list_arrow_margin_right"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/txt_account"
+                        android:textColor="@color/list_left_text_color"
+                        android:textSize="@dimen/list_left_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toLeftOf="@+id/image_arrow_account"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_arrow_account"
+                        android:layout_width="@dimen/list_arrow_width"
+                        android:layout_height="@dimen/list_arrow_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/list_arrow_margin_left"
+                        android:contentDescription="@drawable/gome_sys_icon_right"
+                        android:src="@drawable/gome_sys_icon_right"
+                        />
+                </RelativeLayout>
+                <!-- 分割线  -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_gome_shape_border_width"
+                    android:layout_marginLeft="@dimen/page_left_margin"
+                    android:background="@color/list_arrow"
+                    android:visibility="gone"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:background="@drawable/layout_background_selector"
+                    android:onClick="doOnclickSexItem"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/page_left_margin"
+                    android:paddingRight="@dimen/list_arrow_margin_right"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/txt_sex"
+                        android:textColor="@color/list_left_text_color"
+                        android:textSize="@dimen/list_left_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toLeftOf="@+id/image_arrow_sex"
+                        android:textColor="@color/list_right_text_color"
+                        android:textSize="@dimen/list_right_text_size"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_arrow_sex"
+                        android:layout_width="@dimen/list_arrow_width"
+                        android:layout_height="@dimen/list_arrow_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/list_arrow_margin_left"
+                        android:contentDescription="@drawable/gome_sys_icon_right"
+                        android:src="@drawable/gome_sys_icon_right"
+                        />
+                </RelativeLayout>
+                <!-- 分割线  -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_gome_shape_border_width"
+                    android:layout_marginLeft="@dimen/page_left_margin"
+                    android:background="@color/list_arrow"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:background="@drawable/layout_background_selector"
+                    android:onClick="doOnclickBirthdayItem"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/page_left_margin"
+                    android:paddingRight="@dimen/list_arrow_margin_right"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/txt_birthday"
+                        android:textColor="@color/list_left_text_color"
+                        android:textSize="@dimen/list_left_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toLeftOf="@+id/image_arrow_birthday"
+                        android:textColor="@color/list_right_text_color"
+                        android:textSize="@dimen/list_right_text_size"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_arrow_birthday"
+                        android:layout_width="@dimen/list_arrow_width"
+                        android:layout_height="@dimen/list_arrow_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/list_arrow_margin_left"
+                        android:contentDescription="@drawable/gome_sys_icon_right"
+                        android:src="@drawable/gome_sys_icon_right"
+                        />
+                </RelativeLayout>
+                <!-- 分割线  -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_gome_shape_border_width"
+                    android:layout_marginLeft="@dimen/page_left_margin"
+                    android:background="@color/list_arrow"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:background="@drawable/layout_background_selector"
+                    android:onClick="doOnclickAreaItem"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/page_left_margin"
+                    android:paddingRight="@dimen/list_arrow_margin_right"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/txt_area"
+                        android:textColor="@color/list_left_text_color"
+                        android:textSize="@dimen/list_left_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/text_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toLeftOf="@+id/image_arrow_area"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:textColor="@color/list_right_text_color"
+                        android:textSize="@dimen/list_right_text_size"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_arrow_area"
+                        android:layout_width="@dimen/list_arrow_width"
+                        android:layout_height="@dimen/list_arrow_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/list_arrow_margin_left"
+                        android:contentDescription="@drawable/gome_sys_icon_right"
+                        android:src="@drawable/gome_sys_icon_right"
+                        />
+                </RelativeLayout>
+                <!-- 分割线  -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_gome_shape_border_width"
+                    android:layout_marginLeft="@dimen/page_left_margin"
+                    android:background="@color/list_arrow"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/page_bottom_margin"
+            >
+
+            <Button
+                android:id="@+id/btn_login_off"
+                style="@com.gome:style/Widget.GOME.Light.Caution.Button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/page_left_margin"
+                android:layout_marginRight="@dimen/page_left_margin"
+                android:onClick="doOnclickLoginOffButton"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:text="@string/txt_login_off_account"
+                android:textSize="@dimen/btn_gome_text_size"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

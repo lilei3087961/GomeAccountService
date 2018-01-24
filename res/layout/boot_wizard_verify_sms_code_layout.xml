@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_boot_wizard_verify_sms_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_activity_backgound"
+    android:orientation="vertical"
+    tools:context=".BindOrUnbindActivity" >
+
+<!-- 标题布局 -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height" 
+	    android:layout_marginBottom="@dimen/page_top_item_margin"
+	    android:layout_marginTop="0dp"
+	    android:background="@color/color_title_bg"
+	    >
+    	<ImageView
+    	   android:id="@+id/head_left_arrow"
+    	   android:layout_marginRight="@dimen/title_arrow_margin_to_right"
+    	   
+    	   android:layout_marginLeft="@dimen/title_padding_left"
+    	   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentLeft="true"
+	       android:layout_centerVertical="true"
+	       android:src="@drawable/gome_sys_icon_back"
+	       android:contentDescription="@string/imageview_exit_contentdescription" 
+	       android:onClick="doOnclickBootWizardVerifySmsCodeBackButton"
+    	/>
+        <TextView
+	       android:layout_toRightOf="@+id/head_left_arrow"
+	       
+           android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_centerHorizontal="true"
+	       android:layout_centerVertical="true"
+	       android:textSize="@dimen/text_title_size"
+	       android:textColor="@color/color_title_text"
+	       
+	       android:text="@string/register_activity_hint_sureId"
+            />
+        <View 
+           android:layout_width="match_parent"
+	       android:layout_height="@dimen/title_bottom_line_height"
+	       android:background="@color/color_title_bg_bottom_line"
+	       android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+    
+    <LinearLayout 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="0dip"
+		android:paddingBottom="0dip"
+		android:paddingLeft="@dimen/page_left_margin"
+		android:paddingRight="@dimen/page_right_margin">
+		<LinearLayout 
+		  	android:id="@+id/layout_retrieve_pwd_by_phone"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:paddingTop="0dip"
+			android:paddingBottom="0dip"
+			android:paddingLeft="0dip"
+			android:paddingRight="0dip">
+			<TextView
+			        android:id="@+id/text_phone_number_for_verify_sms_code"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginBottom="@dimen/activity_item_vertical_margin"
+			        android:layout_gravity="center_horizontal"
+			        android:textSize="@dimen/text_info_size_20"
+			        android:textColor="@color/color_text_90"
+			        
+			        />
+					<!--  android:text="18212345678"-->
+				<!--step 2 手机号验证 发送验证码 -->
+				<LinearLayout
+				    android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="horizontal"
+					android:layout_marginBottom="20dp"
+					android:background="@drawable/gome_edit_background_da"
+					android:paddingRight="@dimen/edit_item_padding_right"
+				    >
+				    <EditText
+		                android:id="@+id/edit_sms_verify_code_for_boot_wizard"
+		                android:singleLine="true"
+		            	android:layout_width="0dip"
+		            	android:layout_height="@dimen/button_default_height"
+		            	android:layout_weight="1"
+		            	
+		           		android:background="@color/color_edittext_backgound"
+		         		android:textColor="@color/color_text_edit"
+		         		android:textColorHint="@color/color_text_edit_hint"
+		            	android:textSize="@dimen/text_edit_hint_size"
+		            	
+		            	android:gravity="center_vertical|left"
+		            	android:paddingLeft="@dimen/edit_text_hint_padding_left"
+		            	
+		            	android:hint="@string/edit_hint_sms_verify_code"
+		                android:scrollHorizontally="true"
+					/>
+				    <ImageView 
+		                android:id="@+id/image_delete_sms_verify_code_for_boot_wizard"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="center_vertical"
+		         		android:src="@drawable/gome_sys_icon_delete"
+		         		android:contentDescription="@drawable/gome_sys_icon_delete"
+		            	android:layout_marginRight="@dimen/edit_delete_margin_send_sms_right"
+		                android:onClick="doOnclickDeleteBootWizardSmsVerifyCodeButton"
+		                android:visibility="gone"
+		                />
+					<TextView
+			            android:id="@+id/text_send_sms_verify_code_for_boot_wizard"
+			            
+		                android:layout_width="wrap_content"
+		                android:layout_height="@dimen/button_default_height"
+			            
+		         		android:background="@color/color_edittext_backgound"
+		         		android:textColor="@color/color_button_link"
+		            	android:textSize="@dimen/text_send_virify_code_size"
+			            
+			            android:layout_gravity="center_horizontal"
+                        android:gravity="center_vertical"
+			            android:text="@string/btn_text_send_sms_verify_code"
+			            android:onClick="doOnclikSendSmsVerifyCode" />
+				</LinearLayout>
+				<LinearLayout
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center_vertical"
+					>
+					<CheckBox
+					    android:id="@+id/check_auto_verify_sms_code"
+					    android:layout_marginRight="8dp"
+					    android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:checked="true"
+						android:theme="@com.gome:style/Theme.GOME.Light"
+					    />
+					<TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+						android:gravity="left|center_vertical"
+				        android:text="@string/txt_auto_verify_sms_code_prompt"
+				        android:textSize="@dimen/text_info_size"
+				        android:textColor="@color/color_title_text"
+			        />
+				</LinearLayout>
+		</LinearLayout>
+	 </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="14dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layout_boot_wizard_boottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="bottom"
+            android:visibility="visible"
+            >
+
+            <ImageView
+                android:id="@+id/boot_wizard_left_arrow"
+                android:layout_width="@dimen/list_arrow_width"
+                android:layout_height="@dimen/list_arrow_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:contentDescription="@string/imageview_exit_contentdescription"
+                android:onClick="doOnclickBootWizardVerifySmsCodeBackButton"
+                android:src="@drawable/boot_wizard_arrow_left"
+                />
+
+            <Button
+                style="@style/AppButtonStyle.Bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/boot_wizard_left_arrow"
+                android:onClick="doOnclickBootWizardVerifySmsCodeBackButton"
+                android:text="@string/btn_pre_step"
+                android:textColor="@color/color_title_text"
+                android:textSize="@dimen/text_title_size"
+                />
+
+            <Button
+                style="@style/AppButtonStyle.Bottom"
+                android:id="@+id/text_boot_wizard_verify_sms_code_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@+id/image_boot_wizard_verify_sms_code_right_arrow"
+                android:text="@string/btn_next_step"
+                android:textColor="@color/color_text_disable"
+                android:textSize="@dimen/text_title_size"
+                />
+
+            <ImageView
+                android:id="@+id/image_boot_wizard_verify_sms_code_right_arrow"
+                android:layout_width="@dimen/list_arrow_width"
+                android:layout_height="@dimen/list_arrow_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:contentDescription="@string/imageview_exit_contentdescription"
+                android:src="@drawable/boot_wizard_arrow_right_disable"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
